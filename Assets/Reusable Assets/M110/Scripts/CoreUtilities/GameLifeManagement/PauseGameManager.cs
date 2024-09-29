@@ -37,7 +37,7 @@ namespace Assets.Scripts._Game
             Time.timeScale = 0.0f;
             gamePaused.SetValue(true);
             //the post processing vfx should respond to this
-            PauseEvent.Raise();
+            PauseEvent?.Raise();
         }
         //anything that causes the game to UNpause should call this
         public void UnPauseGame()
@@ -45,7 +45,7 @@ namespace Assets.Scripts._Game
             Time.timeScale = previousTimeScale;
             gamePaused.SetValue(false);
             //the post processing vfx should respond to this
-            UnpauseEvent.Raise();
+            UnpauseEvent?.Raise();
         }
     }
 }

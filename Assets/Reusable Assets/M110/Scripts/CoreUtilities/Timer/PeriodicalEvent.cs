@@ -76,13 +76,13 @@ public class PeriodicalEvent : MonoBehaviour
 
     private void OnEnable()
     {
-        if (shouldAutoRun)
-            StartTimer();
 
         if (shouldResetOnDisable)
         {
             ResetTimer();
         }
+        if (shouldAutoRun)
+            StartTimer();
     }
 
 
